@@ -9,8 +9,6 @@ import (
 	"time"
 )
 
-const TOKEN string = "902aafd0-5401-4b29-a8b3-723948b3a5c1"
-
 var stationCodes map[string]string = map[string]string{
 	"Бердск":              "s9610394",
 	"Речной Вокзал":       "s9610287",

@@ -10,8 +10,6 @@ import (
 	"strings"
 )
 
-const URL string = "https://api.telegram.org/bot5668407634:AAHMSZ8c5HiEHKbSBUtpCkrOB4VEqQfUZxE/"
-
 type Response struct {
 	Ok     bool `json:"ok"`
 	Result []struct {
