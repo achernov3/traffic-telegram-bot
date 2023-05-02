@@ -8,6 +8,8 @@ import (
 	"log"
 	"net/http"
 	"strings"
+
+	"github.com/enescakir/emoji"
 )
 
 type Response struct {
@@ -85,7 +87,7 @@ func SendMessage(chatId int, from, to string) {
 	//Функция отправки сообщения
 	//Запрашивает два параметра: chat_id (забрать из GetUpdates()), from, to - пункт отправления и пункт назначения
 	stops, duration, days, departure, arrival := GetSchedule(from, to)
-	text := fmt.Sprintf("Станция отправления: %v\nСтанция прибытия: %v\nОстановки: %v\nДни: %v\nВремя в пути: %v\nОтправление: %v\nПрибытие: %v\n", from, to, stops, days, duration, departure, arrival)
+	text := fmt.Sprintf("Станция отправления: %v\n%vСтанция прибытия: %v\nОстановки: %v\nДни: %v\nВремя в пути: %v\nОтправление: %v\nПрибытие: %v\n", from, emoji.Train, to, stops, days, duration, departure, arrival)
 	jsonData := map[string]interface{}{
 		"chat_id": chatId,
 		"text":    text,
